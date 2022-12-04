@@ -4,7 +4,7 @@ const axios = require('axios');
 
 
 const bot = new Telegraf('5930144928:AAGZgzG7VlnGeSqIRWrnMMfUeINx1aGm1cE');
-bot.start((ctx) => ctx.reply('Привет друг, я расскажу тебе о погоде, скинь свою геолокацию...'));
+bot.start((ctx) => ctx.reply('Привет друг, я расскажу тебе о погоде, скинь свою геолокацию...🌏'));
 bot.on('message', async (ctx) => {
     if (ctx.message.location) {
     console.log(ctx.message.location);
@@ -17,7 +17,14 @@ bot.on('message', async (ctx) => {
     Ощущается как: ${response.data.main.feels_like}° F,
     Облачность: ${response.data.clouds.all} % ,
     Высота над уровнем моря: ${response.data.main.sea_level} ,
-    Страна: ${response.data.sys.country} 
+    Страна: ${response.data.sys.country}
+
+
+    Пессимист жалуется на ветер.
+    Оптимист надеется на перемену
+    погоды. Реалист ставит паруса.
+    
+    Уильям Артур Уорд
     `)
     }
 })
