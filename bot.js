@@ -14,7 +14,7 @@ bot.on('message', async (ctx) => {
     ctx.reply(`${response.data.name},
     Температура: ${response.data.main.temp}° F,
     Скорость ветра в сукунду: ${response.data.wind.speed},
-    Ощущается как ${response.data.main.feels_like}° F,
+    Ощущается как: ${response.data.main.feels_like}° F,
     Облачность: ${response.data.clouds.all} % ,
     Высота над уровнем моря: ${response.data.main.sea_level} ,
     Страна: ${response.data.sys.country} 
